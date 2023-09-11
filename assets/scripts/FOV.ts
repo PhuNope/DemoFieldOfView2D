@@ -62,7 +62,7 @@ export class FOV extends Component {
         this.graphics.moveTo(vecInLocal.x, vecInLocal.y);
 
         for (let i = 1; i < this.vertices.length; i++) {
-            let results = this.physicsIntance.raycast(new Vec2(this.vertices[0].x, this.vertices[0].y), new Vec2(this.vertices[i].x, this.vertices[i].y), ERaycast2DType.Closest);
+            let results = this.physicsIntance?.raycast(new Vec2(this.vertices[0].x, this.vertices[0].y), new Vec2(this.vertices[i].x, this.vertices[i].y), ERaycast2DType.Closest);
 
             //ray hit object
             if (results.length > 0) {
